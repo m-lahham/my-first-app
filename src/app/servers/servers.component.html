@@ -1,6 +1,11 @@
+<!-- <p>
+  Server Name : <input type="text" (input)="onServerNameInput($event)" > {{serverNameInput}}
+</p> -->
 <p>
-  servers works!
-</p>
-
+    Server Name : <input type="text" (input)="onServerNameInput($event)" > {{serverNameInput}}
+  </p>
+<p><input type="text" [(ngModel)]="serverNameInput" ></p>
+<button class="btn btn-primary" [disabled]="!allowAddServer" (click)="onAddNewServer()">Add Server</button>
+<p>{{serverAddServerStatus}}</p>
 <app-server></app-server>
 <app-server></app-server>
